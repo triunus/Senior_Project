@@ -1,0 +1,65 @@
+1. Toggle GameObject
+ - 토글을 클릭했을 때 On/Off 상태를 표시하고, 토글의 상태가 변할 때 메소드 출력을 할 수 있는 상호작용 UI이다.
+ - Toggle ┬ Background ─ Checkmark 
+	└ Label
+
+1) Toggle Component
+ - 마우스(터치)와 상호작용하는 Toggle 기능
+
+(1) Is On
+ - 토글의 On/Off 상태 설정
+ - Is On 값이 true이면 체크마크가 표시되고, false이면 표시되지 않는다.
+
+(2) Toggle Transition 
+ - 체크마크의 표시가 나타나거나 사라질 때 효과
+ - Toggle Transition - None : 바로 사라지거나 나타난다.
+ - Toggle Transition - Fade : 페이드 효과를 내며 사라지거나 나타난다.
+
+(3) Graphic
+ - Is On 값과 연동되어 나타났다 사라졌다 하는 체크마크 이미지 설정.
+
+(4) Group
+ - 토글이 소속되는 그룹 설정
+
+(5) On Value Changed (Boolean)
+ - Is On 값이  변경될 때 호출되는 메소드 설정.
+  ( Dynamic bool에 대응되는 메소드와 속성을 설정하면 Is On값이 자동으로 전달된다. )
+  ( Toggle 버튼을 클릭하여 화면의 객체의 SetActive값 등을 조정하는데 사용하기 용이하다. )
+
+※ Button을 제외한 Toggle, Slide, Scrollbar, Dropdown, TextMeshPro - InputField
+ - 위와 같은 상호작용 UI의 이벤트 메소드 등록에서 Dynamic Type을 선택하면,
+ 해당 상호작용 UI에서 변화되는 값이 매개변수로 자동 전달된다.
+ - Toggle : IsOn(bool)	Slider : Value(float)		Scrollbar : Value(float)
+   Dropdown : Value(int)	TextMeshpro - InputField : Text(string)
+
+
+Tip. 해당 기능을 봐보면, 버튼 클릭 -> 등록 메소드 동작. 이다.
+     그런데, 아무리 찾아봐도 매개변수 bool값을 전달하는 곳이 없다.
+     그래서, 클릭 시, bool값을 전달한다고 추측한다. ( <-- 거의 확실)
+     그런데, true인지 false인지는 어떻게 구별하는 걸까? ( <-- 처음 누르면, false 값이 나옴 -> 이후 클릭 시 true -> 반복 )
+     따라서, toggle에 bool값이 저장되어 있고, toggle을 클릭함에 따라, 해당 bool 값이 변화되고 객체에 전달되는 방식인 것 같다.
+
+
+2) Background
+ - 네모 박스 형태의 흰색 이미지 배경
+
+3) Checkmark
+ - 토글을 체크했을 때 출력되는 value 이미지
+
+4) Label
+ - 네모 박스 옆에 출력되는 텍스트
+
+
+
+2) Toggle Group
+ - 여러 개의 토글 UI를 하나의 그룹으로 설정해 그룹 내의 토글 중 1개만 체크가 되도록 설정할 수 있다.
+ - 어떤 Toggle Group에 소속될지 토글에서 설정하기 때문에, 특정 Container의 자식 오브젝트로 등록하는 것이 필수는 아니다.
+   ( 자식 오브젝트로 하면, 가시적으로 보기가 좋다.)
+
+(1) Toggle Group - Allow Switch Off
+ - 활성화되면 그룹 내의 모든 토글이 false 상태 가능.			<--- 모든 토글이 false일때는, MainPanel 표시. 아니면 다른 Panel 표시.  와 같이 사용 가능할 
+ - 비활성화일 때는 그룹 내의 토글 중 1개는 반드시 true 상태가 되어야 됨.
+
+
+
+
