@@ -1,0 +1,4 @@
+1. 프로그래밍에 사용되는 기초적인 내용들을 티스토리에 정리해갈 예정.
+ - C#의 기본 형태 : https://tri-dedevelopment-blog.tistory.com/19
+ - C# Class의 기본 개념 : https://tri-dedevelopment-blog.tistory.com/20
+ - C#에서 클래스 호출 : https://tri-dedevelopment-blog.tistory.com/21
