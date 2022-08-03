@@ -1,0 +1,19 @@
+1. Login Activity Diagram과 Login Class Diagram을 통해 Login.cs 구현
+
+ - 구현은, Activity Diagram에 적힌 순서대로 구현.
+
+ - 구현 중, Class와 내부 함수 들의 명칭&형태가 변경될 수 있다.
+
+
+블로그에 적을 것들.
+
+ - 직렬화에 대한 기본 개념
+
+ - 이진 직렬화를 하기 위해서 조건.
+
+ - 관련 클래스들에 대한 간략한 설명 등.
+
+
+ - 게임 개발 01 - Unity에서 Login 설계 : https://tri-dedevelopment-blog.tistory.com/22
+
+ - .NET의 Serialization : https://tri-dedevelopment-blog.tistory.com/23
