@@ -1,0 +1,37 @@
+1. 개체를 직렬화 가능하게 만들기
+
+ - 직렬화할 개체를 만든다
+  => 특정 클래스 지정
+
+ - 직렬화할 개체를 포함할 스트림을 만든다.
+  => 개체를 스트림으로 변경하는 것이기에, 스트림을 하나 생성해야 한다.
+
+ 	>> 2. 스트림이란? (정리 끝)
+
+ - System.Runtime.Serialization.Formatter 인스턴스 ???
+  => 개체에 SerializableAttribute 특성을 적용하라는데, 어케?
+     예시를 찾아보자.
+
+ 3. SerializableAttribute 클래스
+
+ : [System.AttributeUsage(System.AttributeTargets.Class | System.AttributeTargets.Delegate | System.AttributeTargets.Enum | System.AttributeTargets.Struct, Inherited=false)]
+   public sealed class SerializableAttribute : Attribute
+
+ - SerializableAttribute 클래스가 갖는 특성들에 대해서는 차후 기록. (시간 없...)
+ - SerializableAttribute 클래스는 Attribute 클래스를 상속받았습니다.
+ - Attribute 속성을 상속 받은 클래스는 특성으로써의 기능을 수행 할 수 있습니다.
+ - sealed 예약어?는 해당 클래스를 다른 클래스가 상속 받지 못하게 하는 역할을 합니다.
+
+ - 뒤의 Attribute를 제외하여 '[Serializable()]' 또는 '[Serializable]'와 같이 클래스 선언부 위에 명시하면, 해당 클래스를 객체화하는 것이 가능하다.
+
+
+위와 같은 것을 정리하여 블로그에 기록.
+
+
+오늘 한 것.
+ - 스트림, '특성 클래스' 등을 공부 및 정리
+ - 스트림이란? : https://tri-dedevelopment-blog.tistory.com/26
+ - Login과 Register 클래스의 구조를 조금 변경.
+
+
+
