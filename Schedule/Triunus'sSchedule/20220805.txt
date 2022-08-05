@@ -1,0 +1,3 @@
+특성에 대한 정보 및 설명을 블로그에 기재.
+
+- 특성(Attribute in C#) : https://tri-dedevelopment-blog.tistory.com/25
