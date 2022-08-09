@@ -1,0 +1,26 @@
+1. Register 구현 중.
+
+2. 과거와 달리 Register 화면이 사라지고, 버튼 하나로 처리됨.
+
+
+변경하고 픈 것
+
+3. 서버 정보 값을 로컬에 저장 -> 서버에 접속할 때, 읽어오는 방식으로 하자.
+
+4. 서버에 접속할 떄, ServerConnect 클래스를 현재 MonoBehavior를 상속받은 상태이다.
+ -> 찜찜한 이유 : MonoBehavior를 상속받은 클래스는 특정 프리팹의 컴포넌트가 되어야 하는데, 서버 접근 내용이 포함될려 하니 뭔가 찜찜하다.
+ - www.SendWebRequest의 응답을 받아야 하기에, 코루틴을 사용하여 만들려 했음. -> MonoBehavior 상속해야됨 ㅠㅠ
+
+ - async와 await를 사용하여 비동기적으로 C# 코드로만 서버에 접속하게 만들자.
+  --> 이거 찾아보다가 시간 다감 ㅠ
+  --> System.Net.Http API를 사용하기로 함.
+  
+
+
+
+정리하고 싶은 것.
+1. System.Net.NetworkInformation 네임스페이스 정리.
+
+2. 어째서 사용자의 MAC Address를 서버에서 정확하게 구분하기 힘든 이유.
+  -> 어떻게 처리해야 할까? (난, 사용자가 MAC Address를 보내주기로 함)
+
