@@ -1,22 +1,45 @@
-using AccountData;
+using GetSetAccountInfo;
+using ConnectServer;
+using GetSetLobbyInfo;
 
 using UnityEngine;
 
 public class Login : MonoBehaviour
 {
+    LoginRegisterRequest loginRegisterRequest;
     GetSetAccountData getSetAccountData;
-    string[] userDataInLocal;
+    GetSetLobbyData getSetLobbyData;
+    string[] userData;
+    string[] lobbyData;
 
     private void Awake()
     {
         getSetAccountData = new GetSetAccountData();
-        userDataInLocal = new string[2];
+        loginRegisterRequest = new LoginRegisterRequest();
+        getSetLobbyData = new GetSetLobbyData();
+
+        userData = new string[2];
     }
 
     public void LoginButtonOnClick()
     {
-        userDataInLocal = getSetAccountData.GetAccountData();
-        Debug.Log(userDataInLocal);
+        Debug.Log("01. OnClicked Login Button");
+
+        userData = getSetAccountData.GetAccountData();
+        if (userData == null)
+        {
+            Debug.Log("02-1. 파일이 없어서 userData가 null값임.");
+            return;
+        }
+        Debug.Log("02. userData : " + userData + ", " + userData[0] + ", " + userData[1]);
+
+        lobbyData = loginRegisterRequest.Login(userData);
+        Debug.Log("03. lobbyData : " + lobbyData + ", " + lobbyData[0] + ", " + lobbyData[1] + ", " + lobbyData[2] + ", " + lobbyData[3] + ", " + lobbyData[4]);
+
+        Debug.Log("LoginButtonOnClick04 : 로비 데이터 저장하러, 서버에서 가져온 데이터 전달함. ");
+        getSetLobbyData.SetAccountData(lobbyData);
+
+        Debug.Log("로그인 성공");
 
     }
 }
