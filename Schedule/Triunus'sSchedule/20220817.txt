@@ -1,0 +1,46 @@
+1. Dataset 자료구조 json 파일 생성
+ 성공
+2. json 파일 읽기
+ 성공
+3. 텍스트 파일 내에서 datarow 추가
+ 성공
+4. 특정 key값의 value 값 찾기.
+ 성공
+
+https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_JsonConvert_DeserializeObject__1.htm
+
+https://www.newtonsoft.com/json/help/html/DeserializeDataSet.htm
+
+https://www.newtonsoft.com/json/help/html/DeserializeWithJsonSerializerFromFile.htm
+
+https://error999.tistory.com/18
+
+https://docs.microsoft.com/ko-kr/dotnet/api/system.data.datatable?view=netstandard-2.1
+
+display.cs
+
+1. 입력 데이터 : code
+
+2. 패널 변경, 버튼 확인에 의한 패널 변경
+
+3. 메시지 확인을 끝으로 로그인, 회원가입 코드 마무리.
+ ( void 값을 리턴, 로그인 회원가입 코드의 마무리 부분에는 꼭 메시지 출력이 나온다.)
+
+but. 현재 서버가 완성되지 않았기에, 실질적으로 볼 수 있는 오류는 4개이다.
+    추가로, 1개의 오류 출력은 현재 구현 보류 중이다.
+
+
+
+
+다음에 할것.
+
+1. 로비 UI 생성과 버튼 연결
+
+2. 로비에 시작 데이터 가져오기.
+
+3. 유저 이미지 번호와 이미지 연결
+
+4. 버튼을 클릭하면, 유저가 선택한 게임 로비 정보이 기록된 panel이 보임.
+
+5. 스킬 부분은 마우스를 가져가면, 상세 설명이 나옴.
+
