@@ -1,0 +1,9 @@
+1. skillslot image 컴포넌트를 prefab으로 만들어 놓음.
+
+2. 전달받은 skill.length 만큼 skillslot 컴포넌트를 특정 컴포넌트의 자식 컴포넌트로 생성.
+
+3. 전달받은 skill[0]의 값에 해당하는 skill prefab을 skillslot 컴포넌트의 자식으로 생성.
+
+
+이때 2.에서 특정 컴포넌트는, grid toggle layout 컴포넌트를 갖는다.
+ 따라서 skillslot 컴포넌트는 해당 컴포넌트의 자식으로 들어가는 순간 자동으로 RectTransform 값을 갖는다.
